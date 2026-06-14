@@ -1,0 +1,28 @@
+{
+  "checkoutUsers": [
+    {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "firstName": "John",
+      "lastName": "Doe",
+      "postalCode": "10001",
+      "products": ["sauce-labs-backpack"]
+    },
+    {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "firstName": "Priya",
+      "lastName": "Shah",
+      "postalCode": "560001",
+      "products": ["sauce-labs-bike-light"]
+    },
+    {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "firstName": "Alex",
+      "lastName": "Brown",
+      "postalCode": "SW1A1AA",
+      "products": ["sauce-labs-fleece-jacket"]
+    }
+  ]
+}

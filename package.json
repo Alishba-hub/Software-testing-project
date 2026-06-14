@@ -1,0 +1,24 @@
+{
+  "name": "st-project",
+  "version": "1.0.0",
+  "description": "Playwright JS automation framework for SauceDemo",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:login": "playwright test tests/e2e/login.spec.js",
+    "test:checkout": "playwright test tests/e2e/checkout.spec.js",
+    "test:navigation": "playwright test tests/e2e/navigation.spec.js",
+    "report:html": "playwright show-report",
+    "report:allure:generate": "allure generate allure-results --clean -o allure-report",
+    "report:allure:open": "allure open allure-report"
+  },
+  "keywords": [],
+  "author": "Automation Team",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "allure-commandline": "^2.42.0",
+    "allure-playwright": "^3.9.0"
+  }
+}

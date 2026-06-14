@@ -16,7 +16,7 @@ This repository contains a robust automation testing framework built with Playwr
 |   `-- env.qa.json
 |-- data/
 |   |-- checkoutData.json
-|   `-- loginData.json
+|   `-- loginData.xml
 |-- docs/
 |   |-- ARCHITECTURE.md
 |   `-- PROJECT_DOCUMENTATION.md
@@ -103,11 +103,12 @@ npm run report:html
 
 ## Key Framework Features
 - Page Object Model implementation for maintainability
-- Data-driven testing with JSON
+- Data-driven testing with JSON and XML
 - Reusable utilities layer (logging, config, waits, screenshots, parser)
 - Hooks for setup and teardown
 - Failure handling with screenshot capture
 - Integrated reporting (Allure + HTML)
+- 30 total test cases across 4 suites
 
 ## Chosen Application
 SauceDemo (https://www.saucedemo.com) - a well-known and reputable web app commonly used for UI automation practice.

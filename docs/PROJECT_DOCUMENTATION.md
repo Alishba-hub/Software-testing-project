@@ -21,8 +21,8 @@ Build a robust, maintainable Playwright automation framework in JavaScript using
   - pages/CheckoutPage.js
 
 4. Data-Driven Testing
-- JSON test data files:
-  - data/loginData.json
+- JSON and XML test data files:
+  - data/loginData.xml
   - data/checkoutData.json
 - Parser utility: utils/dataParser.js.
 
@@ -45,7 +45,7 @@ Build a robust, maintainable Playwright automation framework in JavaScript using
   - logger.js
   - configReader.js
   - screenshotUtil.js
-  - dataParser.js
+  - dataParser.js (JSON/XML)
   - waitUtils.js
 - Hooks implemented:
   - tests/hooks/globalSetup.js
@@ -56,7 +56,9 @@ Build a robust, maintainable Playwright automation framework in JavaScript using
 - Authentication scenarios
 - Navigation and cart scenarios
 - Checkout flow scenarios
+- Inventory sorting and product actions
 - Validation and negative test scenarios
 
 ## Notes
+- Framework now includes 30 test cases across 4 suites.
 - Framework is scalable up to 40 test cases by adding more data sets and suite files.

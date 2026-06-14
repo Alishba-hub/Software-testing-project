@@ -19,6 +19,7 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "allure-commandline": "^2.42.0",
-    "allure-playwright": "^3.9.0"
+    "allure-playwright": "^3.9.0",
+    "fast-xml-parser": "^4.5.3"
   }
 }

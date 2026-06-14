@@ -23,6 +23,14 @@ class InventoryPage extends BasePage {
     return this.inventoryList.isVisible();
   }
 
+  inventoryItemNames() {
+    return this.page.locator(".inventory_item_name");
+  }
+
+  async getFirstInventoryItemName() {
+    return (await this.inventoryItemNames().first().textContent())?.trim();
+  }
+
   async addProductToCart(productSlug) {
     await this.click(this.addToCartButton(productSlug));
   }

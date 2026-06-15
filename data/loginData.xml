@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loginData>
+  <validUsers>
+    <user>
+      <username>standard_user</username>
+      <password>secret_sauce</password>
+    </user>
+    <user>
+      <username>problem_user</username>
+      <password>secret_sauce</password>
+    </user>
+    <user>
+      <username>performance_glitch_user</username>
+      <password>secret_sauce</password>
+    </user>
+  </validUsers>
+  <invalidUsers>
+    <user>
+      <username>locked_out_user</username>
+      <password>secret_sauce</password>
+      <expectedError>Sorry, this user has been locked out.</expectedError>
+    </user>
+    <user>
+      <username>standard_user</username>
+      <password>wrong_password</password>
+      <expectedError>Username and password do not match</expectedError>
+    </user>
+  </invalidUsers>
+  <blankCredentialCase>
+    <username></username>
+    <password></password>
+    <expectedError>Username is required</expectedError>
+  </blankCredentialCase>
+</loginData>

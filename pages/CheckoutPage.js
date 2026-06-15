@@ -9,6 +9,7 @@ class CheckoutPage extends BasePage {
     this.continueButton = page.locator("#continue");
     this.finishButton = page.locator("#finish");
     this.completeHeader = page.locator(".complete-header");
+    this.errorMessage = page.locator("[data-test='error']");
   }
 
   async enterCustomerInformation(firstName, lastName, postalCode) {
@@ -24,6 +25,10 @@ class CheckoutPage extends BasePage {
 
   async getCompletionMessage() {
     return (await this.getText(this.completeHeader))?.trim();
+  }
+
+  async getErrorMessage() {
+    return (await this.getText(this.errorMessage))?.trim();
   }
 }
 

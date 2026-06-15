@@ -9,6 +9,8 @@ class InventoryPage extends BasePage {
     this.menuButton = page.locator("#react-burger-menu-btn");
     this.logoutLink = page.locator("#logout_sidebar_link");
     this.sortDropdown = page.locator(".product_sort_container");
+    this.itemNames = page.locator(".inventory_item_name");
+    this.itemPrices = page.locator(".inventory_item_price");
   }
 
   addToCartButton(productSlug) {
@@ -49,6 +51,19 @@ class InventoryPage extends BasePage {
 
   async sortBy(optionValue) {
     await this.sortDropdown.selectOption(optionValue);
+  }
+
+  async getProductCount() {
+    return this.itemNames.count();
+  }
+
+  async getProductNames() {
+    return this.itemNames.allTextContents();
+  }
+
+  async getProductPrices() {
+    const priceTexts = await this.itemPrices.allTextContents();
+    return priceTexts.map((text) => Number(text.replace("$", "")));
   }
 }
 

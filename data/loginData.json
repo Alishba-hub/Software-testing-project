@@ -14,11 +14,25 @@
       "username": "standard_user",
       "password": "wrong_password",
       "expectedError": "Username and password do not match"
+    },
+    {
+      "username": "ghost_user",
+      "password": "secret_sauce",
+      "expectedError": "Username and password do not match"
     }
   ],
-  "blankCredentialCase": {
-    "username": "",
-    "password": "",
-    "expectedError": "Username is required"
-  }
+  "fieldValidationCases": [
+    {
+      "case": "blank username and password",
+      "username": "",
+      "password": "",
+      "expectedError": "Username is required"
+    },
+    {
+      "case": "blank password only",
+      "username": "standard_user",
+      "password": "",
+      "expectedError": "Password is required"
+    }
+  ]
 }

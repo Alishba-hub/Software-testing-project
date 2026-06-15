@@ -1,24 +1,45 @@
 {
   "name": "st-project",
   "version": "1.0.0",
-  "description": "Playwright JS automation framework for SauceDemo",
+  "description": "Playwright JS automation framework for SauceDemo (POM, data-driven, Allure reporting, CI)",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
     "test:login": "playwright test tests/e2e/login.spec.js",
     "test:checkout": "playwright test tests/e2e/checkout.spec.js",
     "test:navigation": "playwright test tests/e2e/navigation.spec.js",
+    "test:inventory": "playwright test tests/e2e/inventory.spec.js",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
     "report:html": "playwright show-report",
-    "report:allure:generate": "allure generate allure-results --clean -o allure-report",
-    "report:allure:open": "allure open allure-report"
+    "report:allure:generate": "node scripts/prepareAllure.js && allure generate allure-results --clean -o allure-report",
+    "report:allure:open": "allure open allure-report",
+    "report:allure:serve": "node scripts/prepareAllure.js && allure serve allure-results",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "keywords": [],
+  "keywords": [
+    "playwright",
+    "automation",
+    "qa",
+    "e2e",
+    "pom",
+    "allure",
+    "saucedemo"
+  ],
   "author": "Automation Team",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "allure-commandline": "^2.42.0",
-    "allure-playwright": "^3.9.0"
+    "allure-playwright": "^3.9.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.6.2",
+    "prettier": "^3.3.3"
   }
 }

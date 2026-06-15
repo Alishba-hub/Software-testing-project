@@ -1,0 +1,11 @@
+{
+  "expectedProductCount": 6,
+  "sampleProduct": { "slug": "sauce-labs-backpack", "name": "Sauce Labs Backpack" },
+  "multiAddProducts": ["sauce-labs-backpack", "sauce-labs-bike-light", "sauce-labs-bolt-t-shirt"],
+  "sortCases": [
+    { "value": "az", "label": "Name (A to Z)", "type": "name", "direction": "asc" },
+    { "value": "za", "label": "Name (Z to A)", "type": "name", "direction": "desc" },
+    { "value": "lohi", "label": "Price (low to high)", "type": "price", "direction": "asc" },
+    { "value": "hilo", "label": "Price (high to low)", "type": "price", "direction": "desc" }
+  ]
+}

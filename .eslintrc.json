@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "script"
+  },
+  "extends": ["eslint:recommended", "plugin:playwright/recommended", "prettier"],
+  "plugins": ["playwright"],
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "prefer-const": "error",
+    "eqeqeq": ["error", "always"]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "allure-report/",
+    "allure-results/",
+    "playwright-report/",
+    "test-results/",
+    "logs/"
+  ]
+}

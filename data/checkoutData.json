@@ -23,6 +23,37 @@
       "lastName": "Brown",
       "postalCode": "SW1A1AA",
       "products": ["sauce-labs-fleece-jacket"]
+    },
+    {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "firstName": "Maria",
+      "lastName": "Garcia",
+      "postalCode": "08001",
+      "products": ["sauce-labs-backpack", "sauce-labs-bike-light", "sauce-labs-onesie"]
+    }
+  ],
+  "mandatoryFieldCases": [
+    {
+      "case": "all fields blank",
+      "firstName": "",
+      "lastName": "",
+      "postalCode": "",
+      "expectedError": "First Name is required"
+    },
+    {
+      "case": "missing last name",
+      "firstName": "John",
+      "lastName": "",
+      "postalCode": "10001",
+      "expectedError": "Last Name is required"
+    },
+    {
+      "case": "missing postal code",
+      "firstName": "John",
+      "lastName": "Doe",
+      "postalCode": "",
+      "expectedError": "Postal Code is required"
     }
   ]
 }

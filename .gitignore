@@ -5,3 +5,8 @@ allure-report/
 test-results/
 logs/
 .DS_Store
+Thumbs.db
+.env
+.env.*
+.idea/
+*.log
